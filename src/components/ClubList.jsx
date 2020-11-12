@@ -1,20 +1,19 @@
 import React from "react";
 import Club from "./Club";
 
-const ClubList = (props) => {
-  const items = props.clubs.map((element, i) => {
+function ClubList(props) {
+  const cart = props.clubs.map((club, index) => {
     return (
-      <li key={i}>
-        <Club members={element.members} name={element.name} f={element.fa} />
+      <li key={index}>
+        <Club>{club.name}</Club>
       </li>
     );
   });
-
   return (
     <div>
-      <ul>{items}</ul>
+      <Club list={cart} />
     </div>
   );
-};
+}
 
 export default ClubList;

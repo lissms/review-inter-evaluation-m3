@@ -1,16 +1,15 @@
 import React from "react";
 
-const Club = (props) => {
-  const memb = props.members.map((eachMember, index) => {
-    return <li key={index}>{eachMember}</li>;
-  });
-
+function Club(props) {
+  /* const player = props.clubs.members.map((player, i) => {
+    return <li key={i}>{player.members}</li>;
+  }); */
   return (
     <div>
-      <h2> {props.name}</h2>
-      <i classname={props.f}></i>
-      <ul>{memb}</ul>
+      <h2>{props.list}</h2>
+      <ul></ul>
     </div>
   );
-};
+}
+
 export default Club;
